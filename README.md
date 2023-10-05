@@ -26,17 +26,15 @@ This application was developed individually by me and is not affiliated with DTN
 
 - **Artificial Intelligence (AI)**: Utilize AI models and AssemblyAI API for transcription, sentiment analysis, and note generation.
 
-- **Front-End Development**: Craft an intuitive and user-friendly front-end interface for seamless interaction.
-
 - **Django**: Leverage Django, a robust web framework, for backend development.
-
-- **HTML5**: Create dynamic web pages with HTML5 for a responsive and modern UI.
 
 - **MySQL**: Utilize MySQL for secure and efficient data storage.
 
 - **Python**: Employ Python for the core backend logic and AI integration.
 
 - **Django REST Framework**: Implement RESTful APIs for smooth data communication.
+
+- **HTML5**: Create dynamic web pages with HTML5 for a responsive and modern UI.
 
 - **JavaScript**: Enhance user experience with interactive and dynamic elements.
 
