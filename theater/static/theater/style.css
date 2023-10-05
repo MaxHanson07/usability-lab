@@ -1,0 +1,158 @@
+body {
+    /* background: #fafafa; */
+    color: #333333;
+    margin-top: 5rem;
+    background-color: rgba(232, 233, 239, 1);
+    /* background-color: salmon; */
+
+  }
+  
+  .header-buttons {
+    display: inline-block;
+  }
+
+  .product-description{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #upload-video-btn{
+    background-color: #5f788a;
+    font-size: 16px;
+  }
+
+  #video-streams{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 0 auto; */
+  }
+
+  .video-container{
+    flex-basis: 800px;
+    border: 2px solid rgb(75, 95, 172);
+    border-radius: 5px;
+    margin: 2px;
+    padding: 0px;
+    background-color: rgb(12, 12, 13);
+  }
+
+  #test-video{
+    object-fit: contain;
+  }
+
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  #note-card{
+    /* margin-right: 0; */
+    /* padding-right: -15px; */
+  }
+
+  #note-header{
+    /* text-align: center; */
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #add-note{
+    /* display: inline-block; */
+    margin: 0;
+    /* padding: 0; */
+  }
+
+  #transcript-container{
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: -10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 500px;
+  }
+
+  #transcript-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #transcript-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  ul {
+    margin: 0;
+  }
+  
+  .bg-steel {
+    background-color: #5f788a;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    color: #444444;
+  }
+  
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }

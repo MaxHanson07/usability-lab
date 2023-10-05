@@ -1,0 +1,96 @@
+{% extends "theater/base.html "%}
+<!-- {% load crispy_forms_tags %} -->
+
+{% block content %}
+   
+    <div class="row">
+        <div class="col-md-9">
+            <h1>{{ usabilitytest.product_name }} Usability Test</h1>
+            <p>Conducted on {{ usabilitytest.test_date}} by {{ usabilitytest.moderator }}</p>
+        </div>
+        <div class="col-md-3">
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'video-create' usabilitytest.id %}">Upload Video</a>
+            {% if usabilitytest.transcript.all|length == 0 and usabilitytest.videos.all|length > 0 %}
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'transcript-create' usabilitytest.id %}">Generate Transcript/Analysis</a>
+            {% endif %}
+        </div>
+
+        <!-- <section id="video-theater">
+            <div class="video-container">
+                <div>Hello</div>
+                <div class="video-player"></div>
+            </div>
+         
+        </section> -->
+
+        <div class="col-md-9 video-container">
+            {% if usabilitytest.videos.all|length > 1 %}
+                {% for video in usabilitytest.videos.all %}
+                    <video width="400" controls>                
+                        <source src='{{ MEDIA_URL }}{{ video.file }}' type="video/mp4"></source>
+                    </video>
+                    <a class="btn btn-danger btn-xs" href="{% url 'video-delete' usabilitytest.id video.id %}">X</a>
+                {% endfor %}
+            {% else%}
+                {% for video in usabilitytest.videos.all %}
+                    <video width="800" controls>                
+                        <source src='{{ MEDIA_URL }}{{ video.file }}' type="video/mp4"></source>
+                    </video>
+                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'video-delete' usabilitytest.id video.id %}">Delete</a>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="col-md-3">
+            <div class="content-section overflow-auto">
+
+                <div class="sidebar-buttons">
+                    <button type="button" class="btn btn-light">Notes</button>
+                    <!-- <a class="btn btn-light" href="#">Transcript</button> -->
+                    
+                    <!-- <button onclick="function() { showTranscript({{usability_test}}) };">Click me</button> -->
+                    
+                    <!-- <button
+                        class="btn btn-primary mt-2"
+                        onclick="showTranscript('{{ usability_test }}')">Click me
+                    </button> -->
+                </div>
+
+                
+
+                <div id="sidebar-content">
+                    
+                </div>
+
+                <!-- Note accordions -->
+                <a class="btn btn-primary mt-2 mb-2" href="note/new/" role="button">Add Note</a>
+                    {% for notes in usabilitytest.notes.all %}
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-heading{{ notes.id }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ notes.id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        {{ notes.brief }}
+                                </button>
+                                </h2>
+                                <div id="flush-collapse{{ notes.id}}" class="accordion-collapse collapse" aria-labelledby="flush-heading {{ notes.id}}" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">{{ notes.description }}</div>
+                                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'note-update' usabilitytest.id notes.id %}">Edit</a>
+                                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'note-delete' usabilitytest.id notes.id %}">Delete</a>
+                                </div>
+                            </div>
+                        </div> 
+                    {% endfor %}
+
+                    
+                    
+                
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <h2>Transcript</h2>
+            <pre style="white-space: pre-wrap;">{{ usabilitytest.transcript.first.utterances }}</pre>
+        </div>
+    </div>
+
+{% endblock content %}

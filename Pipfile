@@ -5,8 +5,18 @@ name = "pypi"
 
 [packages]
 django = "*"
+moviepy = "*"
+mysqlclient = "*"
+django-crispy-forms = "*"
+crispy-bootstrap5 = "*"
+pillow = "*"
+djangorestframework = "*"
+drf-nested-routers = "*"
+scikit-learn = "*"
+django-cleanup = "*"
+django-pandas = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.12"
+python_version = "3.8"
