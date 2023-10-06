@@ -1,6 +1,6 @@
 # Usability Lab
 
-This full-stack Django application harnesses cutting-edge AI technology to simplify the process of reviewing video content. It empowers users to generate accurate transcripts, insightful notes, and sentiment analysis from video content, ultimately reducing usability test review time by a remarkable 60%.
+This full-stack Django application harnesses cutting-edge AI technology to simplify the process of reviewing video content, specifically for usability tests, though any video will work. It empowers users to generate accurate transcripts, insightful notes, and sentiment analysis from video content, ultimately reducing usability test review time by a remarkable 60%.
 
 # Context
 
